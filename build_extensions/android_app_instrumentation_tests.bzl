@@ -43,6 +43,7 @@ def android_app_instrumentation_tests(name, binary_target, srcs, deps, target_de
         srcs = srcs,
         testonly = 1,
         deps = deps,
+        javacopts = kwargs.pop("javacopts", []),
     )
 
     _manifest_values = {
